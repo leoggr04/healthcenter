@@ -1,0 +1,21 @@
+site:
+  title: "Rose Health Center Buniadu – Förderverein"
+  description: "Der Förderverein Rose Health Center unterstützt eine Klinik und Schule in Buniadu, Gambia. Erfahren Sie mehr und unterstützen Sie uns mit einer Spende oder Mitgliedschaft."
+  logoAlt: "Rose Health Center Buniadu"
+
+contact:
+  phone: "+49 160 1564980"
+  phoneHref: "+491601564980"
+  location: "Buniadu, Gambia"
+  address: "An der Sonnhalde 1, 87534 Oberstaufen"
+  email: "markusammann@gmx.net"
+
+bank:
+  recipient: "Förderverein Rose Health Center"
+  iban: "DE31 7339 2000 0000 4779 82"
+  ibanCopyValue: "DE31733920000000477982"
+  bic: "GENODEF1IMV"
+  bankName: "Volksbank Immenstadt eG"
+
+footer:
+  copyrightName: "Förderverein Rose Health Center Buniadu"

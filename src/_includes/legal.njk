@@ -1,0 +1,23 @@
+---
+title: "{{ pageTitle }}"
+---
+{% extends "base.njk" %}
+{% set title = pageTitle %}
+{% set robots = robots %}
+{% block body %}
+{% set full = false %}
+{% include "header.njk" %}
+
+<main class="legal-page">
+  <div class="container measure">
+    <a class="back-link" href="/">&larr; Zurück zur Startseite</a>
+    <h1>{{ heading }}</h1>
+    <p class="updated">{{ updated }}</p>
+
+    {{ content | safe }}
+  </div>
+</main>
+
+{% set full = false %}
+{% include "footer.njk" %}
+{% endblock %}

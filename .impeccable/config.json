@@ -1,0 +1,41 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-09-10T17:32:24.036Z",
+        "reason": "brief-pinned: client-supplied Figma export (figma_design_css) specifies font-family: 'Inter' for every text element across both mobile and desktop frames; PRODUCT.md Brand Commitments records Inter as an established brand asset, not a default choice"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-10T17:32:30.943Z",
+        "reason": "brief-pinned: figma_design_css specifies box-shadow: 0px 4px 16.4px #0560B2 / #0690DF verbatim on the two section-divider 'Line' elements; page background is white, not dark"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "*.html"
+        ],
+        "createdAt": "2026-09-10T17:33:22.149Z",
+        "reason": "brief-pinned: figma_design_css specifies box-shadow: 0px 4px 16.4px #0560B2 / #0690DF verbatim on the two section-divider 'Line' elements; applies site-wide since all pages share styles.css; page background is white, not dark"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-10T17:52:05.287Z",
+        "reason": "false positive verified in screenshots (.impeccable/review/index-mobile.png, index-desktop.png): .hero > .container inherits padding-inline: clamp(20px,5vw,56px) from the separate .container rule, which static analysis of .hero's own declaration block can't see"
+      }
+    ]
+  }
+}

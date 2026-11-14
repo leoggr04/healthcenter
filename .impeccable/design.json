@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-10T00:00:00Z",
+  "title": "Design System: Rose Health Center Buniadu",
+  "extensions": {
+    "colorMeta": {
+      "primary": { "role": "primary", "displayName": "Rose Blue", "canonical": "#0560b2" },
+      "primary-deep": { "role": "primary-hover", "displayName": "Rose Blue Deep", "canonical": "#044579" },
+      "accent-sky": { "role": "secondary", "displayName": "Sky Accent", "canonical": "#0690df" },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#0e1520" },
+      "ink-soft": { "role": "neutral", "displayName": "Ink Soft", "canonical": "#3c4a58" },
+      "ink-on-tint": { "role": "neutral", "displayName": "Ink on Tint", "canonical": "#06304f" },
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#ffffff" },
+      "tint-15": { "role": "surface", "displayName": "Tint 15", "canonical": "rgba(9,143,222,0.14)" },
+      "tint-25": { "role": "surface", "displayName": "Tint 25", "canonical": "rgba(9,143,222,0.25)" },
+      "tint-40": { "role": "surface", "displayName": "Tint 40", "canonical": "rgba(9,143,222,0.4)" },
+      "placeholder-bg": { "role": "utility", "displayName": "Placeholder Amber Ground", "canonical": "#fff4e6" },
+      "placeholder-ink": { "role": "utility", "displayName": "Placeholder Amber Ink", "canonical": "#8a4b0a" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Hero / Section Display", "purpose": "Hero category line and donate heading only." },
+      "body": { "displayName": "Body", "purpose": "All paragraph copy, 64ch measure cap." },
+      "label": { "displayName": "Label", "purpose": "Uppercase eyebrow-style labels: footer columns, SPENDENKONTO, member-card headers." }
+    },
+    "shadows": [
+      { "name": "shadow-photo", "value": "0 20px 44px -16px rgba(4,30,58,.38), 0 8px 16px -8px rgba(4,30,58,.22)", "purpose": "Every real photograph and the QR code image." },
+      { "name": "shadow-btn", "value": "0 12px 24px -10px rgba(5,96,178,.6)", "purpose": "Primary CTA pill only." },
+      { "name": "divider-glow-pinned", "value": "0 4px 16px -4px #0560B2", "purpose": "One-off, brief-pinned glow on the Schule/Personal section divider only. Not a reusable pattern." }
+    ],
+    "motion": [
+      { "name": "ease-out-standard", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Scroll-reveal fade/rise and button hover lift." }
+    ],
+    "breakpoints": [
+      { "name": "header-contact", "value": "620px" },
+      { "name": "feature-row-2col", "value": "860px" },
+      { "name": "donate-grid-2col", "value": "780px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Pill CTA, brand blue fill, used for all three 'unterstütze uns' anchors.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#spenden\">unterstütze uns</a>",
+      "css": ".ds-btn-primary { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:#0560b2; color:#fff; font-weight:600; font-size:1rem; text-decoration:none; border-radius:999px; padding:0.85em 1.75em; box-shadow:0 12px 24px -10px rgba(5,96,178,.6); transition:transform .2s cubic-bezier(.16,1,.3,1), box-shadow .2s cubic-bezier(.16,1,.3,1), background-color .2s cubic-bezier(.16,1,.3,1); } .ds-btn-primary:hover { background:#044579; box-shadow:0 16px 30px -10px rgba(5,96,178,.7); transform:translateY(-2px); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outline pill for the IBAN-copy and PDF-download actions.",
+      "html": "<button class=\"ds-btn-secondary\">IBAN kopieren</button>",
+      "css": ".ds-btn-secondary { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:#fff; color:#0560b2; border:1.5px solid rgba(5,96,178,.18); font-weight:600; font-size:1rem; border-radius:999px; padding:0.85em 1.75em; transition:background-color .2s cubic-bezier(.16,1,.3,1); } .ds-btn-secondary:hover { background:rgba(9,143,222,.14); } .ds-btn-secondary:focus-visible { outline:2.5px solid #0690df; outline-offset:3px; }"
+    },
+    {
+      "name": "Photo Card",
+      "kind": "card",
+      "refersTo": "photo-card",
+      "description": "Real photograph in a large rounded card with neutral offset shadow.",
+      "html": "<figure class=\"ds-photo-card\"><img src=\"photo.jpg\" alt=\"...\"></figure>",
+      "css": ".ds-photo-card { border-radius:20px; overflow:hidden; box-shadow:0 20px 44px -16px rgba(4,30,58,.38), 0 8px 16px -8px rgba(4,30,58,.22); aspect-ratio:4/3; } .ds-photo-card img { width:100%; height:100%; object-fit:cover; display:block; }"
+    },
+    {
+      "name": "Stats Panel",
+      "kind": "custom",
+      "refersTo": "stats-panel",
+      "description": "Outlined (not tinted) container for the four clinic statistics — the one bordered-not-filled surface on the page, matching the client's pinned Figma spec.",
+      "html": "<div class=\"ds-stats-panel\"><span class=\"ds-stat-figure\">70</span><span class=\"ds-stat-label\">ca. Patienten / Tag</span></div>",
+      "css": ".ds-stats-panel { border:2px solid rgba(5,96,178,.18); border-radius:28px; padding:40px 24px; } .ds-stat-figure { font-size:clamp(1.75rem,4vw,2.75rem); font-weight:700; color:#0690df; font-variant-numeric:tabular-nums; } .ds-stat-label { font-size:.85rem; color:#3c4a58; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Association Newsletter, Built Well",
+    "overview": "This is a small German Förderverein's donation page for one specific clinic and school in Buniadu, Gambia — not a startup, not an NGO mega-brand. The direction is brief-pinned by the client's own Figma export: white ground, one committed brand blue, Inter throughout, real photography in large rounded cards. The job of the design is to get out of the way of the evidence and make the ask unmistakable every time it appears.",
+    "keyCharacteristics": [
+      "One brand blue (#0560B2) carries every heading, link, and primary action; a lighter sky blue (#0690DF) is reserved for the big stat figures only.",
+      "Soft blue-tinted panels (14-40% alpha) are the only surface language — never a gray card.",
+      "Every real photograph rides in a large rounded card with a soft offset shadow; nothing else gets a shadow except the primary CTA pill.",
+      "Content panels stay flat internally: hairline dividers and spacing, never nested cards."
+    ],
+    "rules": [
+      { "name": "The One Surface Rule", "body": "A blue tint is the only container language on this page. Never give a block inside another tinted or bordered block its own white background, radius, and shadow.", "section": "colors" },
+      { "name": "The Accent-Is-Rare Rule", "body": "Sky Accent (#0690DF) touches exactly one thing: the four big stat numbers. Everywhere else is Rose Blue.", "section": "typography" },
+      { "name": "The Photo-and-Button-Only Rule", "body": "If it isn't a real photograph or the primary CTA, it does not get a shadow.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep Inter at exactly three weights (400/600/700).",
+      "Do reserve Sky Accent (#0690DF) for the four large stat figures only.",
+      "Do give every real photograph and the primary CTA a neutral or brand-tinted offset+blur shadow — nothing else.",
+      "Do keep every tinted panel's interior flat (dividers and spacing, not nested cards).",
+      "Do caption every photograph factually, describing only what is visibly shown."
+    ],
+    "donts": [
+      "Don't add a second accent color, a gradient, or gradient text anywhere on the page.",
+      "Don't reuse the pinned divider glow as a general shadow — it is a one-off between Schule and Personal.",
+      "Don't nest a white card inside the donate panel or any tinted feature panel.",
+      "Don't substitute an icon font, emoji, or Unicode glyph for the inline stroke-SVG icon set.",
+      "Don't invent or embellish the clinic statistics, staff counts, or history."
+    ]
+  }
+}

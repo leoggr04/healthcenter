@@ -1,0 +1,156 @@
+media:
+  input: src/assets/img
+  output: /assets/img
+
+content:
+  - name: home
+    label: "Startseite"
+    type: file
+    path: src/_data/home.yaml
+    format: yaml
+    fields:
+      - name: hero
+        label: "Hero (ganz oben)"
+        type: object
+        fields:
+          - { name: tagline, label: "Tagline", type: string }
+          - { name: category, label: "Kategorie-Zeile", type: string }
+          - { name: paragraphs, label: "Absätze", type: list, fields: [{ name: value, label: "Absatz", type: text }] }
+          - { name: ctaLabel, label: "Button-Text", type: string }
+
+      - name: geschichte
+        label: "Unsere Geschichte"
+        type: object
+        fields:
+          - { name: heading, label: "Überschrift", type: string }
+          - { name: paragraphs, label: "Absätze", type: list, fields: [{ name: value, label: "Absatz", type: text }] }
+          - name: gallery
+            label: "Fotogalerie"
+            type: list
+            fields:
+              - { name: image, label: "Bild (JPG)", type: image }
+              - { name: imageWebp, label: "Bild (WebP, optional)", type: image, required: false }
+              - { name: alt, label: "Alt-Text (Bildbeschreibung für Barrierefreiheit)", type: string }
+              - { name: caption, label: "Bildunterschrift", type: string }
+
+      - name: klinik
+        label: "Unsere Klinik"
+        type: object
+        fields:
+          - name: statsTop
+            label: "Statistik-Zeile (normal)"
+            type: list
+            fields:
+              - { name: figure, label: "Zahl", type: string }
+              - { name: label, label: "Beschriftung", type: string }
+          - { name: arrowLabel, label: "Pfeil-Beschriftung", type: string }
+          - name: statsBottom
+            label: "Statistik-Zeile (Regenzeit)"
+            type: list
+            fields:
+              - { name: figure, label: "Zahl", type: string }
+              - { name: label, label: "Beschriftung", type: string }
+          - { name: heading, label: "Überschrift", type: string }
+          - { name: paragraphs, label: "Absätze", type: list, fields: [{ name: value, label: "Absatz", type: text }] }
+          - { name: ctaLabel, label: "Button-Text", type: string }
+
+      - name: schule
+        label: "Schule"
+        type: object
+        fields:
+          - { name: heading, label: "Überschrift", type: string }
+          - { name: image, label: "Bild (JPG)", type: image }
+          - { name: imageWebp, label: "Bild (WebP, optional)", type: image, required: false }
+          - { name: alt, label: "Alt-Text (Bildbeschreibung)", type: string }
+          - { name: paragraphs, label: "Absätze", type: list, fields: [{ name: value, label: "Absatz", type: text }] }
+
+      - name: personal
+        label: "Unser Personal"
+        type: object
+        fields:
+          - { name: heading, label: "Überschrift", type: string }
+          - { name: image, label: "Bild (JPG)", type: image }
+          - { name: imageWebp, label: "Bild (WebP, optional)", type: image, required: false }
+          - { name: alt, label: "Alt-Text (Bildbeschreibung)", type: string }
+          - { name: paragraphs, label: "Absätze", type: list, fields: [{ name: value, label: "Absatz", type: text }] }
+          - { name: ctaLabel, label: "Button-Text", type: string }
+
+      - name: spenden
+        label: "Jetzt unterstützen (Spenden)"
+        type: object
+        fields:
+          - { name: heading, label: "Überschrift", type: string }
+          - { name: lede, label: "Einleitungstext", type: text }
+          - name: qr
+            label: "QR-Code"
+            type: object
+            fields:
+              - { name: image, label: "QR-Code-Bild", type: image }
+              - { name: alt, label: "Alt-Text", type: string }
+              - { name: caption, label: "Bildunterschrift", type: string }
+          - name: member
+            label: "Fördermitglied werden"
+            type: object
+            fields:
+              - { name: heading, label: "Überschrift", type: string }
+              - { name: text, label: "Beschreibungstext", type: text }
+              - { name: formFile, label: "Beitrittserklärung (PDF)", type: file }
+              - { name: formLabel, label: "Button-Text", type: string }
+          - { name: contactPrompt, label: "Kontakt-Frage", type: string }
+
+  - name: settings
+    label: "Allgemeine Einstellungen"
+    type: file
+    path: src/_data/settings.yaml
+    format: yaml
+    fields:
+      - name: site
+        label: "Website"
+        type: object
+        fields:
+          - { name: title, label: "Seitentitel", type: string }
+          - { name: description, label: "Meta-Beschreibung (für Google)", type: text }
+          - { name: logoAlt, label: "Logo Alt-Text", type: string }
+      - name: contact
+        label: "Kontakt"
+        type: object
+        fields:
+          - { name: phone, label: "Telefonnummer (Anzeige)", type: string }
+          - { name: phoneHref, label: "Telefonnummer (technisch, ohne Leerzeichen, mit +)", type: string }
+          - { name: location, label: "Ort", type: string }
+          - { name: address, label: "Postanschrift", type: string }
+          - { name: email, label: "E-Mail-Adresse", type: string }
+      - name: bank
+        label: "Bankverbindung"
+        type: object
+        fields:
+          - { name: recipient, label: "Empfänger", type: string }
+          - { name: iban, label: "IBAN (mit Leerzeichen, für Anzeige)", type: string }
+          - { name: ibanCopyValue, label: "IBAN (ohne Leerzeichen, zum Kopieren)", type: string }
+          - { name: bic, label: "BIC", type: string }
+          - { name: bankName, label: "Bank", type: string }
+      - name: footer
+        label: "Fußzeile"
+        type: object
+        fields:
+          - { name: copyrightName, label: "Copyright-Name", type: string }
+
+  - name: impressum
+    label: "Impressum"
+    type: file
+    path: src/impressum.md
+    fields:
+      - { name: pageTitle, label: "Seitentitel", type: string }
+      - { name: heading, label: "Überschrift", type: string }
+      - { name: updated, label: "Hinweiszeile", type: string }
+      - { name: body, label: "Inhalt", type: rich-text }
+
+  - name: datenschutz
+    label: "Datenschutz"
+    type: file
+    path: src/datenschutz.md
+    fields:
+      - { name: pageTitle, label: "Seitentitel", type: string }
+      - { name: heading, label: "Überschrift", type: string }
+      - { name: updated, label: "Hinweiszeile (Stand: ...)", type: string }
+      - { name: body, label: "Inhalt", type: rich-text }

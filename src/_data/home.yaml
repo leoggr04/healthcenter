@@ -1,0 +1,79 @@
+hero:
+  tagline: "Gemeinsam helfen • Nachhaltig unterstützen."
+  category: "GESUNDHEIT • BILDUNG • GEMEINSCHAFT"
+  paragraphs:
+    - "Das Rose Health Center in Buniadu, Gambia, bietet Menschen in der Region medizinische Versorgung – unabhängig davon, ob sie sich eine Behandlung leisten können. Täglich werden zahlreiche Patientinnen und Patienten versorgt, kritische Fälle erstversorgt und bei Bedarf in größere Krankenhäuser weitergeleitet."
+    - "Neben der medizinischen Versorgung unterstützt das Center auch eine Schule für Kinder aus der Gemeinde. Damit verbindet das Rose Health Center zwei wichtige Bereiche: Gesundheit und Bildung – und damit die Chance auf eine bessere Zukunft."
+  ctaLabel: "unterstütze uns"
+
+geschichte:
+  heading: "Unsere Geschichte"
+  paragraphs:
+    - "Das Rose Health Center wurde in den 2000er-Jahren von der Gemeinde Buniadu gegründet und von 2007 bis 2025 durch NGOs unterstützt: Im Lauf der Jahre wurde ein Tiefbrunnen gebohrt, eine Solaranlage installiert und die Gebäude erweitert. 2017 kam eine Schule für Kinder aus der Gemeinde hinzu. Des weiteren wurde ein Sonnendach für die Schule beschafft, Schränke für die Schulmaterialien gekauft und Bäume gepflanzt."
+    - "Salieu Tinn, ausgebildeter Krankenpfleger hat seit Februar 2023 die Leitung des Centers inne. Nach dem Ende der internationalen Unterstützung wurde der Förderverein Rose Health Center Buniadu gegründet, um die medizinische Versorgung langfristig zu sichern."
+    - "Durch Spenden konnten dadurch bereits Medikamente, medizinisches Material und ein geländegängiges Rettungsfahrzeug finanziert werden, mit welchem schnelle Hilfe auch außerhalb des Centers ermöglicht wird."
+  gallery:
+    - image: "/assets/img/rescue-vehicle.jpg"
+      imageWebp: "/assets/img/rescue-vehicle.webp"
+      alt: "Das geländegängige Rettungsfahrzeug, finanziert durch Spenden, im Buschgelände bei Buniadu."
+      caption: "Das durch Spenden finanzierte Rettungsfahrzeug ermöglicht schnelle Hilfe auch außerhalb des Centrums."
+    - image: "/assets/img/team-community-group.jpg"
+      imageWebp: "/assets/img/team-community-group.webp"
+      alt: "Team des Rose Health Center gemeinsam mit Unterstützern und der Gemeinde vor dem Rettungsfahrzeug."
+      caption: "Team, Gemeinde und Unterstützer des Rose Health Center."
+    - image: "/assets/img/clinic-waiting-room.jpg"
+      imageWebp: "/assets/img/clinic-waiting-room.webp"
+      alt: "Patientinnen warten im gefliesten Flur des Rose Health Center."
+      caption: "Patientinnen und Patienten warten im Rose Health Center."
+
+klinik:
+  statsTop:
+    - figure: "70"
+      label: "ca. Patienten / Tag"
+    - figure: "1500"
+      label: "ca. Patienten / Monat"
+  arrowLabel: "in der Regenzeit steigt die Zahl auf"
+  statsBottom:
+    - figure: "100"
+      label: "ca. Patienten / Tag"
+    - figure: "2000"
+      label: "ca. Patienten / Monat"
+  heading: "Unsere Klinik"
+  paragraphs:
+    - "Das Rose Health Center ist eine wichtige medizinische Anlaufstelle für die Menschen in Buniadu und der umliegenden Region. Besonders während der Regenzeit führt die erhöhte Zahl an Malariaerkrankungen zu einem größeren Patientenaufkommen."
+    - "Das Team behandelt ein breites Spektrum an Erkrankungen und Verletzungen – von Infektionen, Mangelernährung und Anämie bis hin zu Diabetes, Bluthochdruck und Unfallverletzungen. Kritische Fälle werden vor Ort erstversorgt und bei Bedarf in größere Krankenhäuser weitergeleitet."
+    - "So bietet das Health Center eine grundlegende medizinische Versorgung direkt vor Ort und ist gerade für Menschen in der Region eine wichtige erste Anlaufstelle."
+  ctaLabel: "unterstütze uns"
+
+schule:
+  heading: "Schule"
+  image: "/assets/img/community-children.jpg"
+  imageWebp: "/assets/img/community-children.webp"
+  alt: "Ein Mann mit zwei Kindern aus der Gemeinde Buniadu, festlich gekleidet, vor dem Rettungsfahrzeug."
+  paragraphs:
+    - "Kinder unter 7 Jahren, welche nicht in der Lage waren, den beschwerlich langen Weg zu den entfernten Schulen zu laufen, erhielten bis 2017 keine Schulbildung in Buniadu. Stattdessen blieben sie zuhause – mit erhöhter Gefahr häuslicher Unfälle, insbesondere am offenen Feuer."
+    - "2017 wurde die Schule von River Boat Doctors International gegründet. Sie beherbergt heute 80 Kinder in drei Klassen und Räumen."
+
+personal:
+  heading: "Unser Personal"
+  image: "/assets/img/clinic-pharmacy.jpg"
+  imageWebp: "/assets/img/clinic-pharmacy.webp"
+  alt: "Eine Mitarbeiterin des Rose Health Center an der Ausgabe für Medikamente."
+  paragraphs:
+    - "Das Rose Health Center beschäftigt für das Gesundheitszentrum derzeit sieben Angestellte: eine leitende Pflegekraft (zugleich Manager), vier Pflegekräfte, eine Reinigungskraft und einen Wachmann. In der Schule sind drei Lehrkräfte, eine Reinigungskraft und ein Wachmann angestellt."
+    - "Die Personalkosten belaufen sich auf ca. 1.000 € im Monat. Das Center erhält keinerlei staatliche Unterstützung, unterliegt gleichwohl staatlichen Kontrollen. Die Praxisgebühr von umgerechnet 1,17 € kann von den Patienten kaum gestemmt werden – Patientinnen und Patienten müssen teils unentgeltlich behandelt werden."
+  ctaLabel: "unterstütze uns"
+
+spenden:
+  heading: "JETZT UNTERSTÜTZEN"
+  lede: "Wir möchten eine langfristige finanzielle Unterstützung für das Health Center und die Schule aufbauen. Viele kleine monatliche Spenden würden dabei helfen, die Personalkosten von rund 1.000 € pro Monat zu decken."
+  qr:
+    image: "/assets/img/payment-qr.png"
+    alt: "QR-Code für die Überweisung an den Förderverein Rose Health Center"
+    caption: "QR-Code mit der Banking-App scannen, um die Überweisung direkt vorzubereiten."
+  member:
+    heading: "Fördermitglied werden"
+    text: "Werden Sie dauerhaftes Fördermitglied. Formular herunterladen, ausfüllen und per E-Mail oder Post zurücksenden."
+    formFile: "/assets/forms/beitrittserklaerung.pdf"
+    formLabel: "Beitrittserklärung (PDF)"
+  contactPrompt: "Fragen zur Spende oder Mitgliedschaft?"

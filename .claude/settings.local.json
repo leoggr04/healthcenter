@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -m pip list)",
+      "Bash(sips -g all \"/Users/leo/Dokumente/Projekte/Healt_Center/Rose_Health_Center_Logo-1.pdf\")",
+      "Bash(ffmpeg -y -update 1 -i logo-hires.png -vf \"crop=2304:1210:0:58\" logo-mark.png)",
+      "Bash(sips -g pixelWidth -g pixelHeight logo-mark.png)",
+      "Bash(python3 *)",
+      "Bash(mkdir *)",
+      "Bash(curl *)",
+      "Bash(cd *)"
+    ]
+  }
+}

@@ -1,0 +1,204 @@
+---
+title: "Rose Health Center Buniadu – Förderverein"
+permalink: "/index.html"
+---
+{% extends "base.njk" %}
+{% set title = settings.site.title %}
+{% set description = settings.site.description %}
+{% block body %}
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+{% set full = true %}
+{% include "header.njk" %}
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="container">
+      <p class="hero-tagline">{{ home.hero.tagline }}</p>
+      <h1 class="hero-category">{{ home.hero.category }}</h1>
+      <div class="hero-lede">
+        {% for p in home.hero.paragraphs %}<p>{{ p }}</p>
+        {% endfor %}
+      </div>
+      <a class="btn btn-primary cta-support" href="#spenden">{{ home.hero.ctaLabel }}</a>
+    </div>
+  </section>
+
+  <!-- Unsere Geschichte -->
+  <section class="section" id="geschichte">
+    <div class="container">
+      <div class="story-grid reveal">
+        <div>
+          <h2 class="section-heading">{{ home.geschichte.heading }}</h2>
+          <div class="section-text measure">
+            {% for p in home.geschichte.paragraphs %}<p>{{ p }}</p>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery reveal" id="gallery" role="region" aria-label="Fotogalerie: Unsere Geschichte" tabindex="0">
+        {% for item in home.geschichte.gallery %}
+        <figure class="gallery-item">
+          <div class="gallery-photo">
+            <picture>
+              <source srcset="{{ item.imageWebp }}" type="image/webp">
+              <img src="{{ item.image }}" alt="{{ item.alt }}" loading="lazy">
+            </picture>
+          </div>
+          <figcaption class="gallery-caption">{{ item.caption }}</figcaption>
+        </figure>
+        {% endfor %}
+      </div>
+      <div class="gallery-controls container">
+        <button class="gallery-btn" type="button" data-gallery-prev aria-label="Vorheriges Bild">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="gallery-dots" data-gallery-dots aria-hidden="true"></div>
+        <button class="gallery-btn" type="button" data-gallery-next aria-label="Nächstes Bild">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Unsere Klinik -->
+  <section class="section section-tight" id="klinik">
+    <div class="container">
+      <div class="stats-panel reveal">
+        <div class="stats-row">
+          {% for stat in home.klinik.statsTop %}
+          <div class="stat-col">
+            <span class="stat-figure">{{ stat.figure }}</span>
+            <span class="stat-label">{{ stat.label }}</span>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="stat-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+          <span>{{ home.klinik.arrowLabel }}</span>
+        </div>
+        <div class="stats-row">
+          {% for stat in home.klinik.statsBottom %}
+          <div class="stat-col">
+            <span class="stat-figure">{{ stat.figure }}</span>
+            <span class="stat-label">{{ stat.label }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <h2 class="section-heading reveal">{{ home.klinik.heading }}</h2>
+      <div class="section-text measure reveal">
+        {% for p in home.klinik.paragraphs %}<p>{{ p }}</p>
+        {% endfor %}
+      </div>
+      <div class="cta-row reveal">
+        <a class="btn btn-primary cta-support" href="#spenden">{{ home.klinik.ctaLabel }}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schule -->
+  <section class="section" id="schule">
+    <div class="container">
+      <div class="panel-tint feature-row reveal">
+        <div class="feature-media">
+          <picture>
+            <source srcset="{{ home.schule.imageWebp }}" type="image/webp">
+            <img src="{{ home.schule.image }}" alt="{{ home.schule.alt }}" loading="lazy">
+          </picture>
+        </div>
+        <div class="feature-body">
+          <h2 class="section-heading">{{ home.schule.heading }}</h2>
+          <div class="section-text">
+            {% for p in home.schule.paragraphs %}<p>{{ p }}</p>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Unser Personal -->
+  <section class="section" id="personal">
+    <div class="container">
+      <div class="feature-row image-first reveal">
+        <div class="feature-media">
+          <picture>
+            <source srcset="{{ home.personal.imageWebp }}" type="image/webp">
+            <img src="{{ home.personal.image }}" alt="{{ home.personal.alt }}" loading="lazy">
+          </picture>
+        </div>
+        <div class="feature-body">
+          <h2 class="section-heading">{{ home.personal.heading }}</h2>
+          <div class="section-text">
+            {% for p in home.personal.paragraphs %}<p>{{ p }}</p>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="cta-row reveal">
+        <a class="btn btn-primary cta-support" href="#spenden">{{ home.personal.ctaLabel }}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Jetzt unterstützen -->
+  <section class="section" id="spenden">
+    <div class="container">
+      <div class="donate reveal">
+        <h2 class="donate-heading">{{ home.spenden.heading }}</h2>
+        <p class="donate-lede">{{ home.spenden.lede }}</p>
+
+        <div class="donate-grid">
+          <div class="bank-card">
+            <h3>Spendenkonto</h3>
+            <dl class="bank-rows">
+              <div class="bank-row"><dt>Empfänger</dt><dd>{{ settings.bank.recipient }}</dd></div>
+              <div class="bank-row"><dt>IBAN</dt><dd id="iban-value">{{ settings.bank.iban }}</dd></div>
+              <div class="bank-row"><dt>BIC</dt><dd>{{ settings.bank.bic }}</dd></div>
+              <div class="bank-row"><dt>Bank</dt><dd>{{ settings.bank.bankName }}</dd></div>
+            </dl>
+            <button class="btn btn-secondary copy-btn" type="button" data-copy-iban data-copy-text="{{ settings.bank.ibanCopyValue }}">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span data-copy-label>IBAN kopieren</span>
+            </button>
+          </div>
+
+          <div class="qr-card">
+            <img src="{{ home.spenden.qr.image }}" alt="{{ home.spenden.qr.alt }}" width="150" height="150" loading="eager" decoding="sync">
+            <p>{{ home.spenden.qr.caption }}</p>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div>
+            <h3>{{ home.spenden.member.heading }}</h3>
+            <p>{{ home.spenden.member.text }}</p>
+          </div>
+          <a class="btn btn-secondary" href="{{ home.spenden.member.formFile }}" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+            {{ home.spenden.member.formLabel }}
+          </a>
+        </div>
+
+        <div class="contact-card">
+          <p>{{ home.spenden.contactPrompt }}</p>
+          <div class="contact-list">
+            <a href="mailto:{{ settings.contact.email }}">{{ settings.contact.email }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{% set full = true %}
+{% include "footer.njk" %}
+{% endblock %}
